@@ -2,13 +2,10 @@
 - hosts: localhost
   tasks:
     - name: add dependency manager
-      yum: name=dkms
-      sudo: yes
-    
+      yum: name=dkms    
     - name: add virtualbox repo
       get_url: http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
     
     - name: install virtualbox
       yum: name=VirtualBox
-      sudo: yes
 ---
